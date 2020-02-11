@@ -89,7 +89,7 @@ namespace PrimerParcialAplicada
 
             if(Convert.ToDecimal(ValorInTextbox.Text) < 0)
             {
-                MessageBox.Show("El campode del ID no puede estar vacio");
+                MessageBox.Show("El campo no puede estar vacio");
                 ValorInTextbox.Focus();
                 paso = false;
             }

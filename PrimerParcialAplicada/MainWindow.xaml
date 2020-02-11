@@ -5,8 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PrimerParcialAplicada"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Registro de productos" Height="450" Width="650">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="131*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="457*"/>
+            <ColumnDefinition Width="187*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="ProductoId" HorizontalAlignment="Left" Margin="66,36,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="28" Width="104"/>
+        <Label Content="Descripcion" HorizontalAlignment="Left" Margin="66,99,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="28" Width="108"/>
+        <Label Content="Existencia" HorizontalAlignment="Left" Margin="66,166,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="28" Width="90"/>
+        <Label Content="Costo" HorizontalAlignment="Left" Margin="66,217,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="28" Width="90"/>
+        <Label Content="Valor Inventario" HorizontalAlignment="Left" Margin="66,273,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="28" Width="111"/>
+        <TextBox x:Name="IdTextbox" Grid.Column="2" HorizontalAlignment="Left" Margin="48,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" Height="32"/>
+        <TextBox x:Name="DescripcionTextbox" Grid.Column="2" HorizontalAlignment="Left" Margin="52,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" Height="32" RenderTransformOrigin="0.498,0.47"/>
+        <TextBox x:Name="ExistenciaTextbox" Grid.Column="2" HorizontalAlignment="Left" Margin="50,162,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" Height="32"/>
+        <TextBox x:Name="CostoTextbox" Grid.Column="2" HorizontalAlignment="Left" Margin="50,213,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" Height="32"/>
+        <TextBox x:Name="ValorInTextbox" Grid.Column="2" HorizontalAlignment="Left" Margin="62,269,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136" Height="32"/>
+        <Button Content="Nuevo" HorizontalAlignment="Left" Margin="82,332,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="48" Width="95" Click="NuevoButton"/>
+        <Button Content="Guardar" HorizontalAlignment="Left" Margin="118,332,0,0" VerticalAlignment="Top" Height="48" Width="95" Grid.Column="2" Click="GuardarButton"/>
+        <Button Content="Eliminar" HorizontalAlignment="Left" Margin="266,327,0,0" VerticalAlignment="Top" Height="48" Width="95" Grid.Column="2" Click="EliminarButton"/>
+        <Button Content="Buscar" HorizontalAlignment="Left" Margin="228,32,0,0" VerticalAlignment="Top" Height="48" Width="96" Grid.Column="2" Click="BuscarButton"/>
 
     </Grid>
 </Window>

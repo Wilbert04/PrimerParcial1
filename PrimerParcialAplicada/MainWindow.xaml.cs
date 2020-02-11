@@ -39,9 +39,9 @@ namespace PrimerParcialAplicada
         private Productos LlenaClase()
         {
             Productos productos = new Productos();
-            productos.ProductoId = Convert.ToInt32(IdTextbox.Text);
+            productos.ProductoId = int.Parse(IdTextbox.Text);
             productos.Descripcion = DescripcionTextbox.Text;
-            productos.Existencia = Convert.ToDecimal(ExistenciaTextbox.Text);
+            productos.Existencia = Decimal.Parse(ExistenciaTextbox.Text);
             productos.Costo = Convert.ToDecimal(CostoTextbox.Text);
             productos.ValorInventario = Convert.ToDecimal(ValorInTextbox.Text);
             return productos;
@@ -112,7 +112,7 @@ namespace PrimerParcialAplicada
 
             productos = LlenaClase();
 
-            if(IdTextbox.Text != "0")
+            if(IdTextbox.Text == "0")
             {
                 paso = ProductosBLL.Guardar(productos);
             }

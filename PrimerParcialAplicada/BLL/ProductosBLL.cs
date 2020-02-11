@@ -32,6 +32,11 @@ namespace PrimerParcialAplicada.BLL
             return paso;
         }
 
+        private decimal Calcular(decimal costo, Decimal existencia)
+        {
+            return costo * existencia;
+        }
+
         public static bool Modificar(Productos producto)
         {
             bool paso = false;
